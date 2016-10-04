@@ -1,0 +1,14 @@
+machine:
+  services:
+    - docker
+dependencies:
+  cache_directories:
+    - "~/docker"
+    - "node_modules"
+  override:
+    - docker pull node:6
+    - docker-compose build
+test:
+  override:
+    - docker-compose up -d
+    - echo "no test"
