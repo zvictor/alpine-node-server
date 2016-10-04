@@ -1,7 +1,7 @@
 const http = require('http')
 const mysql = require('mysql')
 
-const MYSQL = 'mysql://user:pass@example.com:3306/dbname'
+const MYSQL = process.env.MYSQL
 
 console.log('Connecting to MYSQL', MYSQL)
 var connection = mysql.createConnection(MYSQL);
